@@ -48,7 +48,7 @@ const CreateCity = () => {
       formData.append('cityInput',cityInput);
   
       try {
-        const res = await axios.post('http://localhost:5000/api/city', formData, {
+        const res = await axios.post('https://clientbackend-9363.onrender.com/api/city', formData, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

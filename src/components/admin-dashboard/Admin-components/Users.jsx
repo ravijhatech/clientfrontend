@@ -59,7 +59,7 @@ const Users = () => {
   
     const handleDelete = async (id)=>{
       try {
-         await axios.delete(`http://localhost:5000/api/add-new-user/${id}`);
+         await axios.delete(`https://clientbackend-9363.onrender.com/api/add-new-user/${id}`);
         setUsers(users.filter(user => user.id !== id));
         alert("User Deleted Sucessfully");
       } catch (error) {

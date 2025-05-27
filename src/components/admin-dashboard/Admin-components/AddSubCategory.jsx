@@ -39,7 +39,7 @@ const AddSubCategory = () => {
     formData.append('iconUrl',iconImg);
 
      try {
-    const res = await axios.post('http://localhost:5000/api/add-sub-category', formData,{
+    const res = await axios.post('https://clientbackend-9363.onrender.com/api/add-sub-category', formData,{
       headers:{
         'Content-Type':'multipart/form-data'
       },

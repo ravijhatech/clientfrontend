@@ -38,7 +38,7 @@ const StateList = () => {
     const fetchCity = async () => {
       const [cityRes, stateRes] = await Promise.all([
            axios.get('https://clientbackend-9363.onrender.com/api/state/fetch'),
-            axios.get('https://clientbackend-9363.onrender.com/api/city/fetch'),
+            
           ]);
 
           console.log(stateRes.data);
