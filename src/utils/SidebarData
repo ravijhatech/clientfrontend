@@ -1,0 +1,155 @@
+import {
+  FaCogs,
+  FaUsers,
+  FaUsersCog,
+  FaBlog,
+  FaMeetup,
+  FaFileInvoiceDollar,
+  FaListUl,
+} from "react-icons/fa";
+import { MdCategory } from "react-icons/md";
+import { MdProductionQuantityLimits } from "react-icons/md";
+
+import {
+  MdDashboardCustomize,
+  MdCreate,
+  MdOutlinePayment,
+  MdAssessment,
+  MdHistory,
+  MdOutlineChat,
+} from "react-icons/md";
+import { FaUsersRays } from "react-icons/fa6";
+import { PiUserCircleGearFill } from "react-icons/pi";
+import { IoMdAnalytics, IoMdPersonAdd } from "react-icons/io";
+
+export const sidebarLinks = [
+
+  {
+    label: "Dashboard",
+    icon: MdDashboardCustomize,
+    requirePermission: ["VIEW_DASHBOARD"],
+    href: "/",
+    role: ["user"],
+  },
+  {
+    label: "Category",
+    icon: MdCategory,
+    requirePermission: ["MANAGE_MEETINGS"],
+    role: ["admin"],
+    dropdown: [
+      {
+        label: "Add Category",
+        href: "/add-category",
+        icon: PiUserCircleGearFill,
+      },
+      {
+        label: "Sub Category",
+        href: "/sub-category",
+        icon: FaUsersCog,
+      },
+    ],
+  },
+  {
+    label: "Users Manager",
+    icon: FaUsers,
+    requirePermission: ["MANAGE_USERS"],
+    role: ["admin"],
+    dropdown: [
+      {
+        label: "Add New User",
+        href: "/add-new-user",
+        icon: IoMdPersonAdd,
+      },
+      { label: "View Users", href: "/users", icon: FaUsers },
+      {
+        label: "Roles & Permissions",
+        href: "/roles&permissions",
+        icon: FaUsersRays,
+      },
+    ],
+  },
+   {
+    label: "Address",
+    icon: FaUsers,
+    requirePermission: ["MANAGE_USERS"],
+    role: ["admin"],
+    dropdown: [
+      {
+        label: "State",
+        href: "/create-state",
+        icon: IoMdPersonAdd,
+      },
+      { label: "City", href: "/city-list", icon: FaUsers },
+    ],
+  },
+  {
+    label: "Shop",
+    icon: FaUsers,
+    requirePermission: ["MANAGE_USERS"],
+    role: ["admin"],
+    dropdown: [
+      {
+        label: "Add Shop",
+        href: "/add-shop",
+        icon: IoMdPersonAdd,
+      },
+      { label: "Shop List", href: "/shop-list", icon: FaUsers },
+      {
+        label: "Create Banner",
+        href: "/create-shop-banner",
+        icon: IoMdPersonAdd,
+      },
+      { label: "Shop Banner List", href: "/Shop-banner-list", icon: FaUsers },
+    ],
+  },
+   {
+    label: "Banner",
+    icon: FaUsers,
+    requirePermission: ["MANAGE_USERS"],
+    role: ["admin"],
+    dropdown: [
+      {
+        label: "Create Banner",
+        href: "/create-banner",
+        icon: IoMdPersonAdd,
+      },
+      { label: "Banner List", href: "/banner-list", icon: FaUsers },
+    ],
+  },
+  // {
+  //   label: "Roles Manager",
+  //   icon: FaUsersCog,
+  //   requirePermission: ["MANAGE_ROLES"],
+  //   role: ["admin"],
+  //   dropdown: [
+  //     {
+  //       label: "Add New Role",
+  //       href: "/v1/admin/dashboard/add-new-role",
+  //       icon: PiUserCircleGearFill,
+  //     },
+  //     {
+  //       label: "View Roles",
+  //       href: "/v1/admin/dashboard/view-roles",
+  //       icon: FaUsersCog,
+  //     },
+  //   ],
+  // },
+   {
+    label: "Products",
+    icon: MdProductionQuantityLimits,
+    href: "/products",
+    requirePermission: ["MANAGE_ROLES"],
+    role: ["admin"],
+    
+  },
+  
+  {
+    label: "Settings",
+    icon: FaCogs,
+    requirePermission: [""],
+    role: ["admin"],
+    href: "/settings",
+  },
+  
+  
+];
